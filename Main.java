@@ -151,8 +151,30 @@ public class Main {
 
          */
 
-        /*EXERCICIO 2 - ficha2*/
+        /*EXERCICIO 3 - ficha2*/
 
+
+
+        System.out.println("Intoduza um array de numeros: ");
+        System.out.println("Quantos numeros deseja introduzir: ");
+
+        int lenght = scanner.nextInt();
+        int[] colecao = new int[lenght];
+
+        System.out.println("Introduza " + lenght + " numeros: ");
+
+        for (int i = 0; i < colecao.length; i++) {
+            int numero = scanner.nextInt();
+            colecao[i] = numero;
+        }
+
+        Ficha2 ficha2 = new Ficha2(colecao);
+
+        int []arrayOrdenado =ficha2.ordenaArray(colecao);
+
+        for (int i = 0; i < arrayOrdenado.length; i++) {
+            System.out.println(arrayOrdenado[i]);
+        }
 
 
 

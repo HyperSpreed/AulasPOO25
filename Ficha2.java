@@ -26,9 +26,17 @@ public class Ficha2 {
     }
     */
 
+    /*
     public Ficha2(int capacidade){
         this.datas = new LocalDate[capacidade];
         this.tamanho = 0;
+    }
+    */
+
+    public Ficha2(int []colecao){
+
+        this.colecao = colecao;
+
     }
 
     public int calculaMinimo(){
@@ -75,8 +83,21 @@ public class Ficha2 {
 
     }
 
-    private LocalDate[] datas;
-    private int tamanho;
+    public int[] ordenaArray(int[] array){
+
+        for (int i = 0; i < array.length; i++){
+            for (int j = i + 1; j < array.length; j++){
+                if (array[i] > array[j]){
+                    int aux = array[i];
+                    array[i] = array[j];
+                    array[j] = aux;
+                }
+            }
+        }
+
+        return array;
+    }
+
 
 
 
